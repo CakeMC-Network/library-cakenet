@@ -6,10 +6,10 @@ package net.cakemc.networking.io;
  * @param <T> the type parameter
  */
 public interface Write<T> {
-    /**
-     * Write.
-     *
-     * @param t the t
-     */
-    void write(T t);
+	/**
+	 * Write.
+	 *
+	 * @param t the t
+	 */
+	void write(T t);
 }

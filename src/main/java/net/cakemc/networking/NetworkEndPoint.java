@@ -11,41 +11,41 @@ import java.util.concurrent.ThreadLocalRandom;
  * The type Network end point.
  */
 public abstract class NetworkEndPoint {
-    /**
-     * The constant clusterId.
-     */
-    public static final ClusterNetworkId clusterId = new ClusterNetworkId();
+	/**
+	 * The constant clusterId.
+	 */
+	public static final ClusterNetworkId clusterId = new ClusterNetworkId();
 
-    private static final Random RANDOM = ThreadLocalRandom.current();
+	private static final Random RANDOM = ThreadLocalRandom.current();
 
-    private final NetworkExecutorFactory executorFactory = new NetworkExecutorFactory();
-    private final ExecutorService sharedService = executorFactory.newInstance();
+	private final NetworkExecutorFactory executorFactory = new NetworkExecutorFactory();
+	private final ExecutorService sharedService = executorFactory.newInstance();
 
-    /**
-     * Generate id long.
-     *
-     * @return the long
-     */
-    public static long generateId() {
-        return clusterId.nextId();
-    }
+	/**
+	 * Generate id long.
+	 *
+	 * @return the long
+	 */
+	public static long generateId() {
+		return clusterId.nextId();
+	}
 
-    /**
-     * Gets shared service.
-     *
-     * @return the shared service
-     */
-    public ExecutorService getSharedService() {
-        return sharedService;
-    }
+	/**
+	 * Gets shared service.
+	 *
+	 * @return the shared service
+	 */
+	public ExecutorService getSharedService() {
+		return sharedService;
+	}
 
-    /**
-     * Gets executor factory.
-     *
-     * @return the executor factory
-     */
-    public NetworkExecutorFactory getExecutorFactory() {
-        return executorFactory;
-    }
+	/**
+	 * Gets executor factory.
+	 *
+	 * @return the executor factory
+	 */
+	public NetworkExecutorFactory getExecutorFactory() {
+		return executorFactory;
+	}
 
 }

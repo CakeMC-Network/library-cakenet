@@ -8,19 +8,20 @@ package net.cakemc.networking.codec;
  */
 public abstract class Codec<From, To> {
 
-    /**
-     * Decode.
-     *
-     * @param from the from
-     */
-    public abstract void decode(From from);
+	/**
+	 * Decode.
+	 *
+	 * @param from the from
+	 */
+	public abstract void decode(From from);
 
-    /**
-     * Encode to.
-     *
-     * @param from the from
-     * @return the to
-     */
-    public abstract To encode(From from);
+	/**
+	 * Encode to.
+	 *
+	 * @param from the from
+	 *
+	 * @return the to
+	 */
+	public abstract To encode(From from);
 
 }

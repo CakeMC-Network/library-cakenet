@@ -7,11 +7,11 @@ package net.cakemc.networking.handler;
  */
 public abstract class AbstractNetworkHandler<T> {
 
-    /**
-     * Handle.
-     *
-     * @param element the element
-     */
-    public abstract void handle(T element);
+	/**
+	 * Handle.
+	 *
+	 * @param element the element
+	 */
+	public abstract void handle(T element);
 
 }

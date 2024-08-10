@@ -7,11 +7,11 @@ package net.cakemc.networking.utils;
  */
 public interface Factory<T> {
 
-    /**
-     * New instance t.
-     *
-     * @return the t
-     */
-    public T newInstance();
+	/**
+	 * New instance t.
+	 *
+	 * @return the t
+	 */
+	public T newInstance();
 
 }

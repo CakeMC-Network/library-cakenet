@@ -8,37 +8,37 @@ import net.cakemc.networking.connection.Connection;
  */
 public enum HandlerType {
 
-    /**
-     * Connect handler type.
-     */
-    CONNECT(Connection.class),
-    /**
-     * Disconnect handler type.
-     */
-    DISCONNECT(Connection.class),
-    /**
-     * In coming packet handler type.
-     */
-    IN_COMING_PACKET(Packet.class),
+	/**
+	 * Connect handler type.
+	 */
+	CONNECT(Connection.class),
+	/**
+	 * Disconnect handler type.
+	 */
+	DISCONNECT(Connection.class),
+	/**
+	 * In coming packet handler type.
+	 */
+	IN_COMING_PACKET(Packet.class),
 
-    /**
-     * Startup handler type.
-     */
-    STARTUP(Void.class),
-    ;
+	/**
+	 * Startup handler type.
+	 */
+	STARTUP(Void.class),
+	;
 
-    private final Class<?> handlerType;
+	private final Class<?> handlerType;
 
-    HandlerType(Class<?> handlerType) {
-        this.handlerType = handlerType;
-    }
+	HandlerType(Class<?> handlerType) {
+		this.handlerType = handlerType;
+	}
 
-    /**
-     * Gets handler type.
-     *
-     * @return the handler type
-     */
-    public Class<?> getHandlerType() {
-        return handlerType;
-    }
+	/**
+	 * Gets handler type.
+	 *
+	 * @return the handler type
+	 */
+	public Class<?> getHandlerType() {
+		return handlerType;
+	}
 }

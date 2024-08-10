@@ -7,11 +7,12 @@ package net.cakemc.networking.io;
  * @param <V> the type parameter
  */
 public interface Read<T, V> {
-    /**
-     * Read v.
-     *
-     * @param source the source
-     * @return the v
-     */
-    V read(T source);
+	/**
+	 * Read v.
+	 *
+	 * @param source the source
+	 *
+	 * @return the v
+	 */
+	V read(T source);
 }

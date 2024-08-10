@@ -13,48 +13,49 @@ import java.io.Serializable;
  */
 public abstract class Packet<T extends NetworkObject> implements Serializable, Write<T>, Read<T, Packet<T>> {
 
-    /**
-     * Descriptor packet descriptor.
-     *
-     * @return the packet descriptor
-     */
-    public final PacketDescriptor descriptor() {
-        return this.getClass().getDeclaredAnnotation(PacketDescriptor.class);
-    }
+	/**
+	 * Descriptor packet descriptor.
+	 *
+	 * @return the packet descriptor
+	 */
+	public final PacketDescriptor descriptor() {
+		return this.getClass().getDeclaredAnnotation(PacketDescriptor.class);
+	}
 
-    /**
-     * Is register able boolean.
-     *
-     * @return the boolean
-     * @throws NoSuchMethodException the no such method exception
-     */
-    public boolean isRegisterAble() throws NoSuchMethodException {
-        return this.descriptor() != null && this.getClass().getDeclaredConstructor() != null;
-    }
+	/**
+	 * Is register able boolean.
+	 *
+	 * @return the boolean
+	 *
+	 * @throws NoSuchMethodException the no such method exception
+	 */
+	public boolean isRegisterAble() throws NoSuchMethodException {
+		return this.descriptor() != null && this.getClass().getDeclaredConstructor() != null;
+	}
 
-    /**
-     * Read packet traffic int.
-     *
-     * @return the int
-     */
-    public abstract int readPacketTraffic();
+	/**
+	 * Read packet traffic int.
+	 *
+	 * @return the int
+	 */
+	public abstract int readPacketTraffic();
 
-    /**
-     * Write packet traffic id.
-     *
-     * @param diff  the diff
-     * @param value the value
-     */
-    public abstract void writePacketTrafficId(int diff, int value);
+	/**
+	 * Write packet traffic id.
+	 *
+	 * @param diff  the diff
+	 * @param value the value
+	 */
+	public abstract void writePacketTrafficId(int diff, int value);
 
-    /**
-     * Write header.
-     */
-    public abstract void writeHeader();
+	/**
+	 * Write header.
+	 */
+	public abstract void writeHeader();
 
-    /**
-     * Write signature.
-     */
-    public abstract void writeSignature();
+	/**
+	 * Write signature.
+	 */
+	public abstract void writeSignature();
 
 }

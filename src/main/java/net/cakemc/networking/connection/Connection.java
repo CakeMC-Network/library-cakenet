@@ -8,22 +8,22 @@ import net.cakemc.networking.codec.Packet;
  */
 public interface Connection {
 
-    /**
-     * Close.
-     */
-    public void close();
+	/**
+	 * Close.
+	 */
+	public void close();
 
-    /**
-     * Send.
-     *
-     * @param packet the packet
-     */
-    public void send(Packet<?> packet);
+	/**
+	 * Send.
+	 *
+	 * @param packet the packet
+	 */
+	public void send(Packet<?> packet);
 
-    /**
-     * Gets channel.
-     *
-     * @return the channel
-     */
-    Channel getChannel();
+	/**
+	 * Gets channel.
+	 *
+	 * @return the channel
+	 */
+	Channel getChannel();
 }
